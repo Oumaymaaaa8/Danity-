@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentStart="true"
+    android:background="#EEE7E2"
+    android:orientation="vertical"
+    android:textAlignment="center">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="268dp"
+        android:layout_height="249dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="120sp"
+        android:baselineAlignBottom="false"
+        android:src="@drawable/_7c892d65246d53e076cac5580dcbd28" />
+
+    <TextView
+        android:id="@+id/greeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:text="@string/welcome_to_danity"
+        android:textAlignment="center"
+        android:textColor="#4A5759"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/teaser"
+        android:layout_width="313dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="30sp"
+        android:text="@string/let_s_dive_into_the_depths_of_your_emotions_and_uncover_the_beauty_within"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:verticalScrollbarPosition="defaultPosition" />
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="236dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#F2EE9D70"
+        android:text="@string/let_s_get_started"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF" />
+</LinearLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "875025692763",
+    "project_id": "danity-51516",
+    "storage_bucket": "danity-51516.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:875025692763:android:912310001008a8a26f677e",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfrz0GXN73os98HUS702leFL9f8R5E4lU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

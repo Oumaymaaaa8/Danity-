@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10sp"
+    android:layout_marginBottom="10sp"
+    app:cardBackgroundColor="#FDF8F3"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    app:layout_goneMarginBottom="16dp"
+    app:layout_goneMarginLeft="16dp"
+    app:layout_goneMarginRight="16dp"
+    app:layout_goneMarginTop="16dp"
+    android:id="@+id/memCard">
+
+    <LinearLayout
+        android:layout_width="383dp"
+        android:layout_height="185dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginVertical="6dp"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical"
+        android:padding="10sp">
+
+        <LinearLayout
+            android:layout_width="372dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="5sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2.5sp"
+                android:text="17"
+                android:textColor="#EE9D70"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/monthYear"
+                android:layout_width="76dp"
+                android:layout_height="wrap_content"
+                android:text="JAN 2021"
+                android:textSize="11sp" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+
+                android:id="@+id/edit"
+                android:layout_width="49dp"
+                android:layout_height="26dp"
+                android:layout_marginRight="60sp"
+                android:background="#00FFFFFF"
+                app:srcCompat="@drawable/more" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="75dp"
+            android:layout_height="54dp"
+            android:layout_gravity="top"
+            android:text="title"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="364dp"
+            android:layout_height="91dp"
+            android:text="content"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
