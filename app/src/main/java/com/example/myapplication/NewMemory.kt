@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import MemoryManager
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -18,8 +19,8 @@ import java.util.Calendar
 
 class NewMemory : AppCompatActivity() {
 
-    private lateinit var dbref : DatabaseReference
 
+    private lateinit var memoryManager: MemoryManager
     private lateinit var memTitle : EditText
     private lateinit var memContent : EditText
     private lateinit var save : Button
@@ -31,33 +32,17 @@ class NewMemory : AppCompatActivity() {
         memContent = findViewById(R.id.memContent)
         save = findViewById(R.id.save)
         retour = findViewById(R.id.retour)
-        dbref = FirebaseDatabase.getInstance().getReference("memories")
+        memoryManager = MemoryManager()
 
         retour.setOnClickListener{
-             saveMemory()
              val intent = Intent(this , Landing ::class.java)
              startActivity(intent)
         }
-        save.setOnClickListener {
-        saveMemory()
+            save.setOnClickListener {
+            memoryManager.createMem(memTitle.text.toString(), memContent.text.toString())
         }
     }
-    private fun saveMemory(){
 
-        val title = memTitle.text.toString()
-        val content = memContent.text.toString()
-        val date = Calendar.getInstance().time
-
-        if(title.isEmpty()){ memTitle.error = "empty title" }
-        if(content.isEmpty()){ memContent.error = "empty title" }
-        val memId = dbref.push().key!!
-        val memory =Memory(memId, title,content , date)
-        dbref.child(memId).setValue(memory).addOnCompleteListener{
-Toast.makeText(this, "memory successfully inserted",Toast.LENGTH_LONG).show()
-        }.addOnFailureListener{
-            Toast.makeText(this, "memory NOT inserted",Toast.LENGTH_LONG).show()
-
-        }}
 }
 
 

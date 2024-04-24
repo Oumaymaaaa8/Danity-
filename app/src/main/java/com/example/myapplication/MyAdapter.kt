@@ -19,8 +19,10 @@ class MyAdapter(private val memoriesList :  ArrayList<Memory>) : RecyclerView.Ad
         holder.title.text = currentitem.title
         holder.content.text = currentitem.content
         holder.day.text =memoryitem.getDay().toString()
-
-        holder.monthYear.text =memoryitem.getMonth().toString() + " " + memoryitem.getYear().toString()
+         var memyeaar = memoryitem.getYear()
+        var memmonth = memoryitem.getMonth().toString()
+        var res = memmonth + " " + memyeaar
+        holder.monthYear.text =res
     }
 
     override fun getItemCount(): Int {

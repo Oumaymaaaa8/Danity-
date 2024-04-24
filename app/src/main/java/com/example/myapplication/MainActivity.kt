@@ -17,7 +17,7 @@ class MainActivity : ComponentActivity() {
          setContentView(R.layout.main)
           actionBar?.hide()
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, Login::class.java)
+            val intent = Intent(this, Landing::class.java)
             startActivity(intent)
             finish()
 

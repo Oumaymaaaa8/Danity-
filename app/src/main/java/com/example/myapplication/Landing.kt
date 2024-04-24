@@ -1,9 +1,11 @@
 package com.example.myapplication
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ActionMenuView
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -23,17 +25,26 @@ class Landing : AppCompatActivity() {
     private lateinit var dbref : DatabaseReference
     private lateinit var memoryRecyclerView: RecyclerView
     private lateinit var memoriesList : ArrayList<Memory>
+    private lateinit var menu : ImageButton
+    private lateinit var new : FloatingActionButton
+    private lateinit var getM: Button
 
+    private lateinit var button: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_landing)
 
+       getM = findViewById<Button>(R.id.affichMem)
+        getM.setOnClickListener{
+            intent = Intent(this , MemoryDisplayer::class.java)
+            intent.putExtra("id", "-Nw688_9RmzDG1I1h5ls")
+            startActivity(intent)
+        }
 
-        val menu = findViewById<ImageButton>(R.id.menu)
-        val new = findViewById<FloatingActionButton>(R.id.createMem)
+       menu = findViewById<ImageButton>(R.id.menu)
+       new = findViewById<FloatingActionButton>(R.id.createMem)
         new.setOnClickListener() {
             val intent = Intent(this, NewMemory::class.java)
-
             startActivity(intent)
         }
         menu.setOnClickListener{
