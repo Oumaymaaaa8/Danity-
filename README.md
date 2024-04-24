@@ -25,7 +25,7 @@ To use Danity, follow these steps:
 
 ## Design
 
-View the Figma design for Danity [here]([https://www.figma.com/your-figma-design-link](https://tinyurl.com/y8b779ay)).
+View the Figma design for Danity [here](https://tinyurl.com/y8b779ay).
 
 
 ## Future Features
